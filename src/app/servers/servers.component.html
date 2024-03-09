@@ -1,4 +1,6 @@
 <p>servers works!</p>
+<input type="text" (input)="updateServerName($event)">
+<p>{{ serverName }}</p>
 <button type="button" (click)="createServer()" [disabled]="!allowNewServer">Add Server</button>
 <br><br>
 {{ this.serverStatus }}

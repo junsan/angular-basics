@@ -1,5 +1,7 @@
 <p>servers works!</p>
-<button type="button" [disabled]="!allowNewServer">Add Server</button>
+<button type="button" (click)="createServer()" [disabled]="!allowNewServer">Add Server</button>
+<br><br>
+{{ this.serverStatus }}
 <br><br>
 <app-server></app-server>
 <app-server></app-server>

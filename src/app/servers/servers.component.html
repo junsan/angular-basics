@@ -29,3 +29,9 @@
 <ol>
     <li *ngFor="let clickButton of numberClicks" [ngClass]="{whiteText:clickButton >= 5}" [ngStyle]="{backgroundColor: getBgColor(clickButton)}">{{ clickButton }}</li>
 </ol>
+
+<br><hr><br>
+Creat Server
+<br><br>
+<app-create-server (serverCreated)="handlerServerCreated($event)"></app-create-server>
+

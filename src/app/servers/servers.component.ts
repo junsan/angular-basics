@@ -48,5 +48,13 @@ export class ServersComponent {
 
   getBgColor(clickButton: number) {
     return clickButton >= 5 ? 'blue' : 'white';
+  } 
+
+  handlerServerCreated(serverData: {name: string, status: string, content: string}) {
+    this.getServers.push({
+      name: serverData.name,
+      status: serverData.status,
+      content: serverData.content
+    });
   }
 }

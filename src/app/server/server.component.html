@@ -1,1 +1,1 @@
-<h1 [ngStyle]="{ backgroundColor: getColor() }" >This a Server Component is {{ serverId }} and status of {{ serverStatus }} or {{ getServerStatus() }}</h1>
+<h1 [ngStyle]="{ backgroundColor: getColor() }" [ngClass]="{online: serverStatus === 'Online'}" >This a Server Component is {{ serverId }} and status of {{ serverStatus }} or {{ getServerStatus() }}</h1>

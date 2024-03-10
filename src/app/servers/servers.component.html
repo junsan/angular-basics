@@ -1,5 +1,7 @@
 <p>servers works!</p>
 <input type="text" (input)="updateServerName($event)">
+<br><br>
+<input type="text" [(ngModel)]="serverName" />
 <p>{{ serverName }}</p>
 <button type="button" (click)="createServer()" [disabled]="!allowNewServer">Add Server</button>
 <br><br>

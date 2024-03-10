@@ -5,8 +5,13 @@
 <p>{{ serverName }}</p>
 <button type="button" (click)="createServer()" [disabled]="!allowNewServer">Add Server</button>
 <br><br>
-{{ this.serverStatus }}
-<br><br>
+<p *ngIf="showServer; else noServer">{{ 'This is the Server. ' + this.serverStatus }}</p>
+<br>
+
+<ng-template #noServer>
+    <p>No Server created.</p>
+</ng-template>
+
 <app-server></app-server>
 <app-server></app-server>
 
@@ -14,5 +19,5 @@
 
 <input type="text" [(ngModel)]="username">
 <p>{{ username }}</p>
-<button type="button" (click)="resetUsername()" [disabled]="username === '">Reset</button>
+<button type="button" (click)="resetUsername()" [disabled]="username === ''">Reset</button>
 

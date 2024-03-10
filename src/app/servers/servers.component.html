@@ -20,3 +20,12 @@
 <p>{{ username }}</p>
 <button type="button" (click)="resetUsername()" [disabled]="username === ''">Reset</button>
 
+<br><hr><br>
+
+<button type="button" (click)="displayDetails()">Display Details</button>
+<div *ngIf="showDetails" >
+    <span>Secret Password: tuna</span> 
+</div> 
+<ol>
+    <li *ngFor="let clickButton of numberClicks" [ngClass]="{whiteText:clickButton >= 5}" [ngStyle]="{backgroundColor: getBgColor(clickButton)}">{{ clickButton }}</li>
+</ol>

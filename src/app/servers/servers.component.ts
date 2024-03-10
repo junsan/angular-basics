@@ -12,6 +12,9 @@ export class ServersComponent {
   username = '';
   showServer = false;
   servers = ['Test 1', 'Test 2'];
+  showDetails = false;
+  numberClicks: number[] = [];
+  incrementClicks = 0;
 
   constructor() {
     setTimeout(() => {
@@ -33,4 +36,13 @@ export class ServersComponent {
     this.username = '';
   }
 
+  displayDetails() {
+    this.incrementClicks = this.incrementClicks + 1;
+    this.showDetails = !this.showDetails;
+    this.numberClicks.push(this.incrementClicks);
+  }
+
+  getBgColor(clickButton: number) {
+    return clickButton >= 5 ? 'blue' : 'white';
+  }
 }

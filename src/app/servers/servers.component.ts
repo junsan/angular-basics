@@ -15,6 +15,10 @@ export class ServersComponent {
   showDetails = false;
   numberClicks: number[] = [];
   incrementClicks = 0;
+  getServers = [
+    {name: 'Test 1', status: 'online', content: 'This is an online server.'},
+    {name: 'Test 2', status: 'offline', content: 'This is an offline server.'},
+  ];
 
   constructor() {
     setTimeout(() => {

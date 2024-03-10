@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ServerComponent {
-    @Input() element!: { name: string, status: string, content: string };
+    @Input('svrElement') element!: { name: string, status: string, content: string };
     serverId: number = 20;
     serverStatus: string = 'Online';
     

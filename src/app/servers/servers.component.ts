@@ -57,4 +57,8 @@ export class ServersComponent {
       content: serverData.content
     });
   }
+
+  outuputLR(localName: HTMLInputElement) {
+    console.log(localName.value);
+  }
 }

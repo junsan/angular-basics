@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
@@ -19,6 +19,7 @@ export class ServersComponent {
     {name: 'Test 1', status: 'online', content: 'This is an online server.'},
     {name: 'Test 2', status: 'offline', content: 'This is an offline server.'},
   ];
+  @ViewChild('localName') serverlocalName!: ElementRef;
 
   constructor() {
     setTimeout(() => {
@@ -59,6 +60,6 @@ export class ServersComponent {
   }
 
   outuputLR(localName: HTMLInputElement) {
-    console.log(localName.value);
+    console.log(this.serverlocalName.nativeElement.value);
   }
 }
